@@ -1,16 +1,71 @@
 <html>
     <head>
+        <style>
+            
+            html, body {
+                font-family: Helvetica, sans-serif;
+                font-weight: 100;
+            }
+            
+            #logindiv {
+                position: relative;
+                top: 35vh;
+            }    
+            
+            form {
+                display: block;
+                margin: 0 auto;
+                width: 200px;
+            }
+            
+            #logindiv input {
+                height: 35px;
+                margin-bottom: 10px;
+                width: 200px;
+                padding: 5px;
+            }
+            
+            #logindiv select {
+                margin-bottom: 10px;
+                /*width: 100%;*/
+            }
+            
+            #greeting {
+                text-align: center;   
+            }
+            
+            #greeting.informal {
+                color: #2196F3;
+                font-weight: 100;
+            }
+            
+            #greeting.formal {
+                font-family: Didot, Garamond, serif;
+                font-weight: 500;
+                color: slategray;   
+            }
+                  
+        </style>
         
     </head>
     <body>
-        <div id="main" class="container">
-            <h1>People</h1>
-            <ul class="people">
-                <li>John Doe</li>
-                <li>Jane Doe</li>
-                <li>Jim Doe</li>
-            </ul>
+        <div id="logindiv">
+            <form>
+                <input id="firstname" placeholder="First Name"/>
+                <input id="lastname" placeholder="Last Name"/>
+                <select id="lang">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                </select>
+                <select id="formal">
+                    <option value="true">Formal</option>
+                    <option value="false">Informal</option>
+                </select>
+                <input type="button" value="Login" id="login" />
+            </form>
+            <h1 id="greeting" class="informal"></h1>      
         </div>
+        
         <script src="jquery-3.2.0.js"></script>
         <script src="Greetr.js"></script>
         <script src="app.js"></script>
